@@ -12,7 +12,44 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+
     }
+    
+  
+.navbar {
+  padding: 15px 60px;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+
+.navbar-brand img {
+  height: 70px;
+  width: auto;
+}
+
+
+.navbar-nav .nav-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #333 !important;
+  transition: all 0.3s ease;
+}
+
+
+.navbar-nav .nav-link:hover {
+  color: #d35400 !important;   
+}
+
+
+.navbar-nav .nav-link.active {
+  color: #d35400 !important;
+  font-weight: 600;
+}
     .banner {
       background:
         linear-gradient(360deg, #1111119b),
@@ -52,23 +89,25 @@
       /* margin: 28px 0 0 480px; */
       box-shadow: 2px 2px 5px #111111bd;
       /* padding: 10px 0 0 0; */
-      margin:0 0 0 480px;
+      margin:0 0 0 500px;
     }
     .banner .searchbar input::placeholder {
       color: #111;
       font-size: 1.2rem;
       padding-left: 20px;
+      padding: 15px 0 0 0 ;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
+    
     .banner .searchbar button {
-      padding: 30px 40px;
+      padding: 20px 40px;
 min-width: 120px;
-      font-size: 1rem;
+      font-size: 0.9rem;
       border-radius: 10px;
       border: none;
       background-color: #ffffff89;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      padding: 10px  10px 10px 10px;
+      padding: 10px 10px;
     }
     .slider {
       display: flex;
@@ -225,9 +264,14 @@ min-width: 120px;
 }
 .menu{
   background-color:beige;
+  border-top-left-radius: 30px;
+      border-bottom-right-radius: 30px;
 }
 .menu .container .menu-header{
-  background-color: #f6e96fb1;
+  background-color: #d35400;
+  border-radius: 50px; 
+  border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
 }
 .menu p{
   font-family: cursive;
@@ -236,17 +280,88 @@ font-display: swap;
 text-align: center;
 text-transform: uppercase;
 }
+.accordion {
+  max-width: 80%;
+  margin:20px 40px;
+}
+footer {
+  padding :30px 0;
+  background-color: #ffff;
+  color: #444;
+  display: flex;
+  padding: 10px 15px;
+  border-radius: 50;
+}
+footer ul {
+  list-style: none;
+  padding: 0 100px;
+}
+footer ul li {
+  padding: 7px 0;
+  font-size: 17px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 630;
+  text-decoration: underline;
+}
+footer{
+  padding: 
+  30px 0;
+}
 
+.accordion-flush  {
+  background-color: #f6e96fb1;
+  color: #333;
+  font-size: 15px;
+  
 
-
+}
+.accordion-button {
+  font-family: cursive;
+  font-weight: 500;
+  padding: 20px 30px;
+  background-color: #fff !important;
+  color: rgb(20, 5, 5) !important;
+}
     
     
 
   </style>
-<body>
-	<!-- navbar -->
-	<body>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+
+    <!-- Logo Left -->
+    <a class="navbar-brand" href="#">
+      <img src="/assets/paradselogoo.png" alt="Logo" height="50">
+    </a>
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu Right -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">   <!-- IMPORTANT -->
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">SPECIALS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">MENU</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FAQ</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
     <div class="banner">
+    
       <h3>THE</h3>
       <h2>PARADISE</h2>
       <div class="searchbar">
@@ -531,22 +646,79 @@ text-transform: uppercase;
 </div>
 <!-- footer --> 
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init(
-      {
-        offset:320,
-        duration:1500,
-      }
-    );
-  </script>
-  </body>
-	<!-- banner -->
-	
-	<!-- cards -->
-	<!-- sidebar -->
-	<!-- FAQ -->
-	<!-- footer -->
+  
+    
+    <div class="accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+       what is biryani?
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"> the biryani is a popular dish in India . It is made with rice, meat (chicken, mutton, or fish), and spices. The dish is known for its rich flavors and aromatic spices.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        how to make biryani?
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">To make biryani, first cook the rice until it is fluffy and separate. Then, prepare the meat or vegetables with spices and cook them separately. Layer the cooked rice and meat in a pot, add some ghee or oil, and steam it for 15-20 minutes. Serve hot with raita or salad.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        what are the ingredients of biryani?
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"> biryani is made with rice, meat (chicken, mutton, or fish), and spices. The dish is known for its rich flavors and aromatic spices.</div>
+    </div>
+  </div>
+</div>
 
-</body>
+<!-- footer -->
+ <footer>
+    <ul>
+        <li>services</li>
+        <li>about us</li>
+        <li>contact us</li>
+        <li>terms and conditions</li>
+    </ul>
+    <ul>
+        <li>services</li>
+        <li>about us</li>
+        <li>contact us</li>
+        <li>terms and conditions</li>
+    </ul>
+    <ul>
+        <li>services</li>
+        <li>about us</li>
+        <li>contact us</li>
+        <li>terms and conditions</li>
+    </ul>
+    <ul>
+        <li>services</li>
+        <li>about us</li>
+        <li>contact us</li>
+        <li>terms and conditions</li>
+    </ul>
+ </footer>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init(
+                {
+                    offset: 320,
+                    duration: 1500,
+
+                }
+            );
+
+        </script>
+  </body>
 </html>

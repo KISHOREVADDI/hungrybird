@@ -17,7 +17,15 @@ public class registrationservice {
 	  try {
 		  String sql="insert into registration(firstname,lastname,username,email,password,confirmpassword)values(?,?,?,?,?,?)";
 		PreparedStatement pmst=conn.prepareStatement(sql);
+		pmst.setString(1, r.getFirstname());
+        pmst.setString(2, r.getLastname());
+        pmst.setString(3, r.getUsername());
+        pmst.setString(4, r.getEmail());
+        pmst.setString(5, r.getPassword());
+        pmst.setString(6, r.getConfirmpassword());
 		int i=pmst.executeUpdate();
+		
+
 		if (i==1) {
 			f=true;
 		}
